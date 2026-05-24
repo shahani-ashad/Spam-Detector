@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toxic Comment Detection</title>
+</head>
+<body>
+
+<h2>Sinhala Toxic Comment Detection</h2>
+
+<form action="/predict" method="post">
+    <textarea name="text" rows="4" cols="50" placeholder="Type a comment..."></textarea>
+    <br><br>
+    <button type="submit">Predict</button>
+</form>
+
+<!-- show prediction only if exists -->
+{% if prediction_text %}
+<h3>{{ prediction_text }}</h3>
+{% endif %}
+
+</body>
+</html>
